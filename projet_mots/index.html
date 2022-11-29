@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projet compteur de mots</title>
+  </head>
+  <body>
+    <div id="resultat"></div>
+  </body>
+  <script>
+    let phrase = prompt("Insérez votre phrase");
+    let compteur = 0;
+    let separation = phrase.split(" ");
+
+    for (let i = 0; i < separation.length; i++) {
+      compteur++;
+    }
+    alert("Il y a " + compteur + " mots dans votre phrase");
+
+    // possibilité de faire plus simple
+    // let phrase = prompt("Insérez votre phrase");
+    // let compteur = 0;
+    // let separation = phrase.split(" ");
+
+    // alert("Il y a " + separation.length + " mots dans votre phrase");
+  </script>
+</html>

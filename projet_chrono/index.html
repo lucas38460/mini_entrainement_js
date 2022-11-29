@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projet Chrono</title>
+  </head>
+  <body>
+    <div id="affichage"></div>
+  </body>
+  <script>
+    let affichage = document.getElementById("affichage");
+    const departMinutes = parseInt(prompt("Temps (en minutes)"));
+    let temps = departMinutes * 60;
+
+    setInterval(() => {
+      const minutes = Math.floor(temps / 60);
+      let secondes = temps % 60;
+
+      secondes = secondes < 10 ? "0" + secondes : secondes;
+
+      affichage.innerHTML = `${minutes}:${secondes}`;
+      temps = temps <= 0 ? 0 : temps - 1;
+    }, 1000);
+  </script>
+</html>

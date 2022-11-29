@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projet counter</title>
+    <!-- Alignement des éléments au centre avec css -->
+    <style>
+      body {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Emplacement de l'affichage -->
+    <p id="affichage"></p>
+    <!-- Boutton pour enlever -->
+    <button id="moins">-</button>
+    <!-- Boutton pour ajouter -->
+    <button id="plus">+</button>
+    <!-- Boutton pour remettre à zero -->
+    <button id="zero">0</button>
+  </body>
+  <!-- Début du script et du moteur  -->
+  <script>
+    // Récupération et stockage de affichage
+    let affichage = document.getElementById("affichage");
+    // Boutton pour ajouter
+    let plus = document.querySelector("#plus");
+    // Récupération et stockage de Boutton pour enlever
+    let moins = document.querySelector("#moins");
+    // Récupération et stockage de Boutton pour remettre à zero
+    let zero = document.querySelector("#zero");
+    // Stockage de Compteur
+    let counter = 0;
+    // Affichage
+    affichage.textContent = `${counter}`;
+
+    // Evenements remettre à zero
+    zero.addEventListener("click", () => {
+      // Remise à zero du compteur
+      counter = 0;
+      // Affichage
+      affichage.textContent = `${counter}`;
+    });
+
+    // Evenements Ajouter
+    plus.addEventListener("click", () => {
+      // Incrémentation +1
+      counter++;
+      // Affichage
+      affichage.textContent = `${counter}`;
+    });
+
+    // Evenements Enlever
+    moins.addEventListener("click", () => {
+      // Décrémentation -1
+      counter--;
+      // Affichage
+      affichage.textContent = `${counter}`;
+    });
+  </script>
+</html>
